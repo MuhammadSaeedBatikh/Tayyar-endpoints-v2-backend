@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/endpoints-v2-backend.iml" filepath="$PROJECT_DIR$/endpoints-v2-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/endpoints-v2-backend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/endpoints-v2-backend_main.iml" group="endpoints-v2-backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/endpoints-v2-backend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/endpoints-v2-backend_test.iml" group="endpoints-v2-backend" />
+    </modules>
+  </component>
+</project>

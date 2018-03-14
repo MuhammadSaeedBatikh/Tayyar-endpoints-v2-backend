@@ -1,0 +1,31 @@
+<queue-entries>
+    <queue>
+        <name>driverQueue</name>
+        <rate>1/s</rate>
+    </queue>
+    <queue>
+        <name>reviewQueue</name>
+        <rate>1/s</rate>
+    </queue>
+    <queue>
+        <name>createMerchantsQueue</name>
+        <rate>1/s</rate>
+    </queue>
+    <queue>
+        <name>DataUploaderQueue</name>
+        <rate>1/s</rate>
+        <bucket-size>5</bucket-size>
+    </queue>
+    <queue>
+        <name>UpdateMerchantPricesQueue</name>
+        <rate>1/s</rate>
+    </queue>
+    <queue>
+        <name>MerchantDeletionQueue</name>
+        <rate>1/s</rate>
+    </queue>
+    <queue>
+        <name>SendNotificationQueue</name>
+        <rate>1/s</rate>
+    </queue>
+</queue-entries>

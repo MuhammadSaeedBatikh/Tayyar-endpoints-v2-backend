@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : endpoints-v2-backend.war">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="endpoints-v2-backend.war">
+      <element id="artifact" artifact-name="Gradle : endpoints-v2-backend.war (exploded)" />
+    </root>
+  </artifact>
+</component>

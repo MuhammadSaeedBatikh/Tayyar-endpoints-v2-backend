@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.apis:google-api-services-servicemanagement:v1-rev14-1.22.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-servicemanagement/v1-rev14-1.22.0/d52eeaf1cece1e536121efa49f4a285f849ad2e1/google-api-services-servicemanagement-v1-rev14-1.22.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-servicemanagement/v1-rev14-1.22.0/cb2a1aee3a60cbf4306ec5335b75e23a926ad9a9/google-api-services-servicemanagement-v1-rev14-1.22.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <!-- Wrap the backend with Endpoints Frameworks v2. -->
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Private</web-resource-name>
+            <description>Matches all pages</description>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+
+    <servlet>
+        <servlet-name>EndpointsServlet</servlet-name>
+        <servlet-class>com.google.api.server.spi.EndpointsServlet</servlet-class>
+        <init-param>
+            <param-name>services</param-name>
+            <param-value>backend.apis.MerchantApi,
+                backend.apis.CustomerApi,
+                backend.apis.DriverApi
+            </param-value>
+        </init-param>
+    </servlet>
+
+    <!-- Route API method requests to the backend. -->
+    <servlet-mapping>
+        <servlet-name>EndpointsServlet</servlet-name>
+        <url-pattern>/_ah/api/*</url-pattern>
+    </servlet-mapping>
+
+
+
+<!--non-API servlets-->
+    <servlet>
+        <servlet-name>CreateRoleServlet</servlet-name>
+        <servlet-class>backend.servlets.CreateRoleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateRoleServlet</servlet-name>
+        <url-pattern>/admin/CreateRoleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DataUploaderServlet</servlet-name>
+        <servlet-class>
+            backend.servlets.DataUploaderServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeliveriesNeedToBeCheckedServlet</servlet-name>
+        <servlet-class>backend.servlets.DeliveriesNeedToBeCheckedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeliveriesNeedToBeCheckedServlet</servlet-name>
+        <url-pattern>/admin/DeliveriesNeedToBeCheckedServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DriverLocationCheckServlet</servlet-name>
+        <servlet-class>backend.servlets.DriverLocationCheckServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DriverLocationCheckServlet</servlet-name>
+        <url-pattern>/admin/crons/DriverLocationCheckServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddDataToMerchantServlet</servlet-name>
+        <servlet-class>backend.servlets.AddDataToMerchantServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddDataToMerchantServlet</servlet-name>
+        <url-pattern>/admin/AddDataToMerchantServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SendNotificationServlet</servlet-name>
+        <servlet-class>
+            backend.servlets.SendNotificationServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadMerchantServlet</servlet-name>
+        <servlet-class>
+            backend.servlets.UploadMerchantServlet
+        </servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateMerchantPricesServlet</servlet-name>
+        <servlet-class>
+            backend.servlets.UpdateMerchantPricesServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateMerchantPricesServlet</servlet-name>
+        <url-pattern>/admin/UpdateMerchantPricesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MerchantDeletionServlet</servlet-name>
+        <servlet-class>backend.servlets.MerchantDeletionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DataUploaderServlet</servlet-name>
+        <url-pattern>/admin/DataUploaderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SendNotificationServlet</servlet-name>
+        <url-pattern>/admin/SendNotificationServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UploadMerchantServlet</servlet-name>
+        <url-pattern>/admin/UploadMerchantServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DownloadMerchantServlet</servlet-name>
+        <servlet-class>backend.servlets.DownloadMerchantServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownloadMerchantServlet</servlet-name>
+        <url-pattern>/admin/DownloadMerchantServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetTheNearestDriverServlet</servlet-name>
+        <servlet-class>backend.servlets.GetTheNearestDriverServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>GetTheNearestDriverServlet</servlet-name>
+        <url-pattern>/admin/GetTheNearestDriverServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MerchantDeletionServlet</servlet-name>
+        <url-pattern>/admin/MerchantDeletionServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CallApiServlet</servlet-name>
+        <servlet-class>backend.servlets.CallApiServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CallApiServlet</servlet-name>
+        <url-pattern>/admin/CallApiServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+
+        <servlet-name>GenerateTestDataServlet</servlet-name>
+        <servlet-class>backend.servlets.GenerateTestDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReviewServlet</servlet-name>
+        <servlet-class>backend.servlets.ReviewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GenerateTestDataServlet</servlet-name>
+        <url-pattern>/admin/GenerateTestDataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReviewServlet</servlet-name>
+        <url-pattern>/admin/ReviewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>backend.servlets.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/admin/WelcomeServlet</url-pattern>
+    </servlet-mapping>
+<!--end non-API servlets-->
+
+    <!--&lt;!&ndash; Add a filter that performs Endpoints logging and monitoring. &ndash;&gt;-->
+    <!--&lt;!&ndash; [START api_management] &ndash;&gt;-->
+    <filter>
+        <filter-name>endpoints-api-controller</filter-name>
+        <filter-class>com.google.api.control.extensions.appengine.GoogleAppEngineControlFilter</filter-class>
+        <init-param>
+            <param-name>endpoints.projectId</param-name>
+            <param-value>${endpoints.project.id}</param-value>
+        </init-param>
+        <init-param>
+            <param-name>endpoints.serviceName</param-name>
+            <param-value>${endpoints.project.id}.appspot.com</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>endpoints-api-controller</filter-name>
+        <servlet-name>EndpointsServlet</servlet-name>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>INCLUDE</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+    <listener>
+        <listener-class>backend.helpers.OfyHelper</listener-class>
+    </listener>
+
+    <welcome-file-list>
+        <welcome-file>admin/index.html</welcome-file>
+    </welcome-file-list>
+
+
+</web-app>

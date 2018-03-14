@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NewHome</title>
+</head>
+<body>
+
+<form action="DeliveriesNeedToBeCheckedServlet" method="get">
+    <fieldset>
+        <legend>check deliveries in city</legend>
+        <input type="text" id="cityId" name="cityId">
+        <input type="submit" value="check" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<form action="DeliveriesNeedToBeCheckedServlet" method="post">
+    <fieldset>
+        <legend>done checking delivery</legend>
+        <input type="text" id="deliveryRequestId" name="deliveryRequestId">
+        <input type="submit" value="clear" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+
+<br><br><br><br><br><br><br>
+
+<form actio n="crons/DriverLocationCheckServlet" method="post">
+    <fieldset>
+        <legend>run cron job</legend>
+        <input type="submit" value="run cron job" style="width:160px;height:100px">
+    </fieldset>
+</form>
+<br>
+<form action="SendNotificationServlet" method="post">
+    <fieldset>
+        <legend>Notification</legend>
+        city id
+        <input type="text" id="notifiedCityId" name="notifiedCityId">
+        <br>
+        message
+        <input type="text" id="promotionMessageJson" name="promotionMessageJson">
+        <input type="submit" value="send Notifications" style="width:160px;height:100px">
+    </fieldset>
+</form>
+<br><br><br><br><br><br><br>
+<form action="UploadMerchantServlet" method="post">
+    <fieldset>
+        <legend>Merchant Uploader</legend>
+        <br>
+        new Merchant
+        <input type="text" id="newMerchant" name="newMerchant">
+        <br>
+        json merchant
+        <input type="text" id="jsonMerchant" name="jsonMerchant">
+        <input type="submit" value="upload merchant" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<br><br><br><br><br><br><br>
+<form action="UploadMerchantServlet" method="get">
+    <fieldset>
+        <legend>Merchant Deleter</legend>
+        <input type="text" id="merchantId" name="merchantId">
+        <input type="submit" value="delete  merchant" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<form action="AddDataToMerchantServlet" method="post">
+    <fieldset>
+        <legend>add items to category</legend>
+        <br>
+        new Merchant
+        <input type="text" id="newMerchant" name="newMerchant">
+        <br>
+        category Id
+        <input type="text" id="categoryId" name="categoryId">
+        <br>
+        items Json
+        <input type="text" id="itemsJson" name="itemsJson">
+
+        <input type="submit" value="add items" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<br><br><br><br><br><br><br>
+
+<div> connected to an api method</div>
+<form action="CallApiServlet" method="post" name="itemForm">
+    <fieldset>
+        <legend>Call Api Servlet</legend>
+        input
+        <input type="text" id="reqPram" name="reqPram">
+        <br>
+        check
+        <input type="text" id="check" name="check">
+        inventory json
+        <input type="text" id="inventory" name="inventory">
+        <input type="submit" value="perform" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<div style="color:blue">updated</div>
+<form action="GenerateTestDataServlet" method="post" name="itemForm">
+    <fieldset>
+        <legend>generate</legend>
+        <input type="submit" value="generate Data" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+<form action="GenerateTestDataServlet" method="get" name="itemForm">
+    <fieldset>
+        <legend>generate</legend>
+        <input type="submit" value="generate DeliveryRequest" style="width:160px;height:100px">
+    </fieldset>
+</form>
+
+</body>
+</html>

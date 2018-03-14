@@ -1,0 +1,158 @@
+<!-- Indices written at Wed, 21 Feb 2018 17:40:01 EET -->
+
+<datastore-indexes autoGenerate="true">
+    <!-- Indices written at Wed, 21 Feb 2018 18:07:55 EET -->
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="pricing" direction="asc" />
+    </datastore-index>
+
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="pricing" direction="desc" />
+    </datastore-index>
+
+
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="defaultOrder" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="estimatedDeliveryTime" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="rating" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="rating" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="defaultOrder" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="pricing" direction="asc" />
+    </datastore-index>
+
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="pricing" direction="desc" />
+    </datastore-index>
+
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="estimatedDeliveryTime" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="minimumOrder" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="minimumOrder" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="actualCategoriesIds" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="baseDeliveryFee" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="^i" direction="asc" />
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="baseDeliveryFee" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Offer" source="auto">
+        <property name="coupon" direction="asc" />
+        <property name="creationDate" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="DeliveryRequest" source="auto">
+        <property name="canceled" direction="asc" />
+        <property name="customerId" direction="asc" />
+        <property name="orderDelivered" direction="asc" />
+        <property name="creationDate" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="nameEn" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="Merchant" source="auto">
+        <property name="supportedAreasListIds" direction="asc" />
+        <property name="nameAr" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index ancestor="false" kind="DeliveryRequest" source="auto">
+        <property name="customerId" direction="asc" />
+        <property name="creationDate" direction="desc" />
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index ancestor="false" kind="DeliveryRequest" source="auto">
+        <property name="driverId" direction="asc" />
+        <property name="state" direction="asc" />
+        <property name="creationDate" direction="asc" />
+    </datastore-index>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index ancestor="false" kind="DeliveryRequest" source="auto">
+        <property name="driverId" direction="asc" />
+        <property name="creationDate" direction="asc" />
+    </datastore-index>
+
+
+</datastore-indexes>
